@@ -18,10 +18,13 @@ The default settings hash looks like this:
       'speed_limit' => nil
     }
 
-When no origins are specified, the default ones are used. The default
-origin for Ubuntu is `${distro_id}:${distro_codename}-security`.
-For Debian it's `origin=Debian,archive=stable,label=Debian-Security`.
-Speed limit is a `nil` when no limits are set and a number in KB.
+You should overwrite `origins` attribute when you don't want to use default
+origins.
+
+Blacklist contains a list of names of packages that should not be updated.
+
+Speed limit is the maximal download speed in KB. When you don't want a limit
+set it to `nil`.
 
 License and Authors
 ===================
