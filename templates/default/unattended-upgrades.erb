@@ -1,0 +1,18 @@
+Unattended-Upgrade::Origins-Pattern {
+<% @origins.each do |origin| %>
+  "<%= origin %>";
+<% end %>
+};
+
+Unattended-Upgrade::Package-Blacklist {
+<% @blacklist.each do |package| %>
+  "<%= package %>";
+<% end %>
+};
+
+Unattended-Upgrade::Mail "<%= @email %>";
+Unattended-Upgrade::MailOnlyOnError "<%= @only_mail_on_error %>";
+
+<% if @speed_limit %>
+Acquire::http::Dl-Limit "<%= @speed_limit %>";
+<% end %>
