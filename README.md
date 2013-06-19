@@ -1,12 +1,15 @@
 Description
 ===========
 
-Installs and configures `unattended-upgrades` Debian/Ubuntu package.
+Installs and configures `unattended-upgrades` Debian/Ubuntu package. This
+package automatically installs system security upgrades and updates package
+lists. It is recommended to have a MTA configured, as the logs are sent via an
+email.
 
 Attributes
 ==========
 
-The default settings hash looks like this:
+The default attributes hash looks like this:
 
     node['unattended_upgrades'] = {
       'update_package_lists' => true,
@@ -21,10 +24,10 @@ The default settings hash looks like this:
 You should overwrite `origins` attribute when you don't want to use default
 origins.
 
-Blacklist contains a list of names of packages that should not be updated.
+Blacklist is a list of names of packages that should not be updated.
 
-Speed limit is the maximal download speed in KB. When you don't want a limit
-set it to `nil`.
+Speed limit is the maximal download speed in KB. When you don't want a limit it
+should be set to `nil`.
 
 License and Authors
 ===================
