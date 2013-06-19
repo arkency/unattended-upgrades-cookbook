@@ -1,4 +1,4 @@
-defaults = node['unattended_upgrades']
+defaults = node['unattended-upgrades']
 
 package 'unattended-upgrades'
 

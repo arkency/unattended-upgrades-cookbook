@@ -15,4 +15,4 @@ when 'ubuntu'
   attributes['origins'] << '${distro_id}:${distro_codename}-security'
 end
 
-default['unattended_upgrades'] = attributes
+default['unattended-upgrades'] = attributes

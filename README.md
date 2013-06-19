@@ -11,7 +11,7 @@ Attributes
 
 The default attributes hash looks like this:
 
-    node['unattended_upgrades'] = {
+    node['unattended-upgrades'] = {
       'update_package_lists' => true,
       'update_packages' => true,
       'origins' => [],
